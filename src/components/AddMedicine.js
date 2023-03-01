@@ -17,7 +17,7 @@ function AddMed() {
         mtype: '',
         ingrdt: '',
         quant: '',
-        category: ''
+        categoryId: 0
 
     })
 
@@ -42,7 +42,7 @@ function AddMed() {
                 quantity: medicine.quant
             },
             category: {
-                categoryId: medicine.category
+                categoryId: medicine.categoryId
             }
         }
 
@@ -124,10 +124,11 @@ function AddMed() {
 
                 <div className='form-group'>
                     <label>Category&emsp;&nbsp;</label>
-                    <select style={{ width: '557px', borderRadius: '20px' }} >
-                        <option value={medicine.category}>1</option>
-                        <option value={medicine.category}>2</option>
-                        <option value={medicine.category}>3</option>
+                    <select type='number' name='categoryId' style={{ width: '557px', borderRadius: '20px' }}
+                     onChange={event=>{updateMedicine({...medicine,categoryId:event.target.value})}}  >
+                         <option value={medicine.categoryId=1} onChange={event=>{updateMedicine({...medicine,categoryId:event.target.value})}} >Health</option>
+                        <option value={medicine.categoryId=2} onChange={event=>{updateMedicine({...medicine,categoryId:event.target.value})}}>Hair</option>
+                        <option value={medicine.categoryId=3} onChange={event=>{updateMedicine({...medicine,categoryId:event.target.value})}}>Skin</option>
                     </select>
                 </div>
                 <button onClick={handleButton} className="btn btn-primary" style={{ width: '644px', borderRadius: '20px' }}>

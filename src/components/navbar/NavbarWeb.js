@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import herbal from "../../assets/herbal.svg";
+import SearchBar from "../searchBar/SearchBar";
 
 const NavbarWeb = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+  };
+
   return (
     <div style={{ backgroundColor: "gainsboro" }}>
       <div></div>
@@ -36,38 +47,46 @@ const NavbarWeb = () => {
             </a>
             <div className="dropdown-menu">
               <a className="dropdown-item" href="#">
-                Link 1
+                Skin products
               </a>
               <a className="dropdown-item" href="#">
-                Link 2
+                Hair products
               </a>
               <a className="dropdown-item" href="#">
-                Link 3
+                Face products
               </a>
             </div>
           </li>
         </ul>
         <ul className="navbar-nav ml-auto">
-          <form className="form-inline my-2 my-lg-0">
-            <input
-              className="form-control mr-sm-2"
-              type="text"
-              placeholder="Search"
-            />
-            <button className="btn btn-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Register
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Login
-            </a>
-          </li>
+          <SearchBar/>
+          {isAuthenticated ? (
+            <>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  My Profile
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#" onClick={handleLogout}>
+                  Logout
+                </a>
+              </li>
+            </>
+          ) : (
+            <>
+              {/* <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Register
+                </a>
+              </li> */}
+              <li className="nav-item">
+                <a className="nav-link" href="#" onClick={handleLogin}>
+                  Login/Register
+                </a>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </div>

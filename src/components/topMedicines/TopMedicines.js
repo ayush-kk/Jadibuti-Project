@@ -38,7 +38,7 @@ const TopProducts = () => {
               </div>
             ))}
           </div>
-          <div className="btn-box">
+          <div className="btn-box" style={{paddingBottom:"30px"}}>
             <a href="">View All</a>
           </div>
         </div>

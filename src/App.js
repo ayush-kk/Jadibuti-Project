@@ -1,3 +1,4 @@
+
 import "./App.css";
 import Aboutus from "./components/aboutUs/Aboutus";
 import Banner from "./components/banner/Banner";
@@ -18,6 +19,7 @@ function App() {
       <TopMedicines />
       <Testimony/>
       <Footer />
+
     </div>
   );
 }

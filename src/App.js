@@ -1,27 +1,27 @@
 
 import "./App.css";
-import Aboutus from "./components/aboutUs/Aboutus";
-import Banner from "./components/banner/Banner";
-
-import Footer from "./components/footer/Footer";
-import Jumbotron from "./components/jumbotron/Jumbotron";
-import NavbarWeb from "./components/navBar/NavbarWeb";
-import Testimony from "./components/testimony/Testimony";
-import TopMedicines from "./components/topMedicines/TopMedicines";
+import{
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
+import Home from "./components/Home/Home";
+import Login from "./components/login/Login";
 
 function App() {
   return (
-    <div>
-      <NavbarWeb />
-      <Banner/>
-      <Jumbotron />
-      <Aboutus />
-      <TopMedicines />
-      <Testimony/>
-      <Footer />
+    <div className="App">
+    <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="/home" element={<Home/>}/>
+    <Route path="/login" element={<Login/>}/>
 
-    </div>
-  );
+    </Routes>
+    </BrowserRouter>
+   
+  </div>
+  )
 }
 
 export default App;

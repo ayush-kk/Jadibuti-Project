@@ -1,16 +1,25 @@
-import logo from './logo.svg';
-//import './App.css';
-import { BrowserRouter, Routes,Route } from 'react-router-dom';
-import AddMed from './components/AddMedicine';
+
+import "./App.css";
+import Aboutus from "./components/aboutUs/Aboutus";
+import Banner from "./components/banner/Banner";
+
+import Footer from "./components/footer/Footer";
+import Jumbotron from "./components/jumbotron/Jumbotron";
+import NavbarWeb from "./components/navBar/NavbarWeb";
+import Testimony from "./components/testimony/Testimony";
+import TopMedicines from "./components/topMedicines/TopMedicines";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-      <Routes>
-        <Route path='/medicine/add' element={<AddMed/>}/>
-      </Routes>
-      </BrowserRouter>
+    <div>
+      <NavbarWeb />
+      <Banner/>
+      <Jumbotron />
+      <Aboutus />
+      <TopMedicines />
+      <Testimony/>
+      <Footer />
+
     </div>
   );
 }

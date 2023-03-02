@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import '../updateCustomer/UpdateCustomer.css';
 
-import { updateAddress } from '../../../Store/Actions/CustomerActions';
+import { updateAddress } from '../../../store/actions/CustomerActions';
 import Sidebar from '../sidebar/Sidebar';
 
 function UpdateAddress() {

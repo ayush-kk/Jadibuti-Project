@@ -6,7 +6,7 @@ import  maleIcon from '../../../assets/maleIcon.jpg';
 import femaleIcon from '../../../assets/femaleIcon.jpg'
 
 function Sidebar({ firstName, lastName, gender,userId}) {
-
+  const myuser = JSON.parse(localStorage.getItem("myuser"));
   const iconSrc = gender === "male" ? maleIcon : femaleIcon;
 
 
@@ -32,10 +32,10 @@ function Sidebar({ firstName, lastName, gender,userId}) {
       <div className="links">
         <ul>
           <li>
-            <Link to="/customer/update/:userId">Update Profile</Link>
+            <Link to={`/customer/update/${myuser.userId}`}>Update Profile</Link>
           </li>
           <li>
-            <Link to={`/customer/update/address/:userId`}>Update Address</Link>
+            <Link to={`/customer/update/address/${myuser.userId}`}>Update Address</Link>
           </li>
           <li>View Orders</li>
           <li>My Prescriptions</li>

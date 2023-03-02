@@ -7,6 +7,8 @@ export function fetchPrescriptionsByUserId(userId){
                 type:FETCH_PRESCRIPTIONS_USERID,
                 action:resp.data
             })
+        }).catch(error=>{
+            alert("No Prescriptions available");
         })
     }
 }

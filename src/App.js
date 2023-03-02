@@ -14,9 +14,15 @@ import UpdateAddress from "./components/customer/updateAddress/UpdateAddress";
 import FetchAllOrders from "./components/order/viewAllOrders/FetchAllOrders";
 import AdminDashBoard from "./components/admin/AdminDashBoard";
 import OrdersByStatus from "./components/order/viewOrdersByStatus/OrdersByStatus";
+import AddMed from "./components/medicine/addMedicine/AddMedicine";
+import Register from "./components/register/Register";
+
+
+
 
 function App() {
   return (
+
     <div className="App">
     <BrowserRouter>
     <Routes>
@@ -30,6 +36,8 @@ function App() {
     <Route path="/customer/update/address/:userId" element={<UpdateAddress/>}/>
     <Route path='/order/all' element={<FetchAllOrders/>}/>
     <Route path='/orders/status' element={<OrdersByStatus/>}/>
+    <Route path='/medicine/add' element={<AddMed/>}/>
+    <Route path='/register' element={<Register/>}/>
     
     </Routes>
     </BrowserRouter>

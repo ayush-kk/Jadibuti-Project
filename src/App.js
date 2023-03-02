@@ -16,7 +16,7 @@ import AdminDashBoard from "./components/admin/AdminDashBoard";
 import OrdersByStatus from "./components/order/viewOrdersByStatus/OrdersByStatus";
 import AddMed from "./components/medicine/addMedicine/AddMedicine";
 import Register from "./components/register/Register";
-
+import FetchPrescriptionByUserId from "./components/prescription/fetchPrescriptionByUserId/FetchPrescriptionByUserId";
 
 
 
@@ -38,6 +38,7 @@ function App() {
     <Route path='/orders/status' element={<OrdersByStatus/>}/>
     <Route path='/medicine/add' element={<AddMed/>}/>
     <Route path='/register' element={<Register/>}/>
+    <Route path='/prescriptions/:userId' element={<FetchPrescriptionByUserId/>}/>
     
     </Routes>
     </BrowserRouter>

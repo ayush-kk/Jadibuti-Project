@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addOrder } from "../../store/actions/OrderAction";
+import { addOrder } from "../../../Store/Actions/OrderAction";
 
 import styles from "./addorder.module.css"
 import "./UserAndAddress.js"
@@ -38,11 +38,11 @@ function AddOrder() {
     }
     return (
         <div class={styles.container}>
-            <div className="outerAddOrder">
+            <div className={styles.outerAddOrder}>
             <UserAndAddress/>
                     <div className={styles.right}>
                     <form>
-                        <div className="form-group row">
+                        <div className="form-group row" >
                             <label for="noOfItems" >No Of Items</label>
 
                             <div className="col-sm-10">

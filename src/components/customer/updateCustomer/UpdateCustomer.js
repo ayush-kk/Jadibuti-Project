@@ -3,7 +3,7 @@ import {useDispatch,useSelector} from 'react-redux';
 import { useParams } from 'react-router-dom';
 import '../updateCustomer/UpdateCustomer.css';
 
-import { updateCustomer } from '../../../store/actions/CustomerActions'
+import { updateCustomer } from '../../../Store/Actions/CustomerActions'
 import Sidebar from '../sidebar/Sidebar';
 import NavbarWeb from '../../navbar/NavbarWeb';
 import Footer from '../../footer/Footer';

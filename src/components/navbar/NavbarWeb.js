@@ -88,11 +88,9 @@ const NavbarWeb = () => {
             </>
           ) : (
             <>
-              {/* <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Register
-                </a>
-              </li> */}
+              <li className="nav-item">
+                <Link className="nav-link" to='/register' >Register</Link>
+              </li>
               <li className="nav-item">
                 <Link className="nav-link" onClick={handleLogin} to='/login' >Login</Link>
                 {/* <a  href="/login" onClick={handleLogin}>

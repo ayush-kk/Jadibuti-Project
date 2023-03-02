@@ -1,9 +1,24 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import herbal from "../../assets/herbal.svg";
+
 import SearchBar from "../searchBar/SearchBar";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const NavbarWeb = () => {
+
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const myuser = JSON.parse(localStorage.getItem("myuser"));
+  const loginUser = useSelector(state=>state.loginReducer.loginUser);
+  const navigate=useNavigate();
+  const doLogout=() => {
+    if(myuser !==null) {
+      localStorage.removeItem("myuser")
+      alert("logged out.");
+      navigate("/home");
+    }
+  }
 
   const handleLogin = () => {
     setIsAuthenticated(true);
@@ -60,7 +75,7 @@ const NavbarWeb = () => {
         </ul>
         <ul className="navbar-nav ml-auto">
           <SearchBar/>
-          {isAuthenticated ? (
+          {myuser!==null? (
             <>
               <li className="nav-item">
                 <a className="nav-link" href="#">
@@ -68,9 +83,7 @@ const NavbarWeb = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" onClick={handleLogout}>
-                  Logout
-                </a>
+              <Link className="nav-link" onClick={doLogout}>Logout</Link>
               </li>
             </>
           ) : (
@@ -81,9 +94,10 @@ const NavbarWeb = () => {
                 </a>
               </li> */}
               <li className="nav-item">
-                <a className="nav-link" href="#" onClick={handleLogin}>
-                  Login/Register
-                </a>
+                <Link className="nav-link" onClick={handleLogin} to='/login' >Login</Link>
+                {/* <a  href="/login" onClick={handleLogin}>
+                  Login
+                </a> */}
               </li>
             </>
           )}

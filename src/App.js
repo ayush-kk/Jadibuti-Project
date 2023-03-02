@@ -7,6 +7,10 @@ import{
 } from 'react-router-dom';
 import Home from "./components/Home/Home";
 import Login from "./components/login/Login";
+import FetchAllCustomers from "./components/customer/fetchAllCustomers/FetchAllCustomers";
+import FetchCustomer from "./components/customer/fetchCustomer/FetchCustomer.js";
+import UpdateCustomer from "./components/customer/updateCustomer/UpdateCustomer";
+import UpdateAddress from "./components/customer/updateAddress/UpdateAddress";
 
 function App() {
   return (
@@ -16,6 +20,11 @@ function App() {
     <Route path="/" element={<Home/>}/>
     <Route path="/home" element={<Home/>}/>
     <Route path="/login" element={<Login/>}/>
+    <Route path="/customer/all" element={<FetchAllCustomers/>}/>
+    <Route path="/customer/:userId" element={<FetchCustomer/>}/>
+    <Route path="/customer/update/:userId" element={<UpdateCustomer/>}/>
+    <Route path="/customer/update/address/:userId" element={<UpdateAddress/>}/>
+    
 
     </Routes>
     </BrowserRouter>

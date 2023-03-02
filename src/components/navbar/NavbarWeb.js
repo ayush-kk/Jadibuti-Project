@@ -78,9 +78,7 @@ const NavbarWeb = () => {
           {myuser!==null? (
             <>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  My Profile
-                </a>
+              <Link className="nav-link" to={`/customer/${myuser.userId}`}>My profile</Link>
               </li>
               <li className="nav-item">
               <Link className="nav-link" onClick={doLogout}>Logout</Link>

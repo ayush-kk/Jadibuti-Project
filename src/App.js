@@ -11,6 +11,7 @@ import FetchAllCustomers from "./components/customer/fetchAllCustomers/FetchAllC
 import FetchCustomer from "./components/customer/fetchCustomer/FetchCustomer.js";
 import UpdateCustomer from "./components/customer/updateCustomer/UpdateCustomer";
 import UpdateAddress from "./components/customer/updateAddress/UpdateAddress";
+import AddMed from "./components/medicine/addMedicine/AddMedicine";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
     <Route path="/customer/:userId" element={<FetchCustomer/>}/>
     <Route path="/customer/update/:userId" element={<UpdateCustomer/>}/>
     <Route path="/customer/update/address/:userId" element={<UpdateAddress/>}/>
+    <Route path='/medicine/add' element={<AddMed/>}/>
     
 
     </Routes>

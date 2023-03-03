@@ -4,7 +4,8 @@ import loginReducer from './LoginReducer'
 import CustomerReducer from "./CustomerReducer";
 import OrderReducer from "./OrderReducer";
 import registerReducer from "./RegisterReducer";
-import PrescriptionReducer from "./PrescriptionReducer";
+import prescriptionReducer from "./PrescriptionReducer";
+
 
 
 const rootReducer = combineReducers({
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
     CustomerReducer,
     OrderReducer,
     registerReducer,
-    PrescriptionReducer
+    prescriptionReducer
+
     
    
 })

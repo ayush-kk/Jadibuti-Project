@@ -3,7 +3,11 @@ import { FETCH_ALL_ORDERS, FETCH_ORDERS_BY_STATUS, FETCH_ORDER_BY_ID } from "../
 const intialState ={
     orders:[],
     order: null,
-    ordersByStatus : []
+    ordersByStatus : [],
+    addOrder: null,
+    orderwithId: null,
+    orderswithuserId: []
+    
 }
 
 export default function OrderReducer(state=intialState,action){
@@ -23,7 +27,24 @@ export default function OrderReducer(state=intialState,action){
             ordersByStatus:action.payload
         }
     }
+    else if (action.type === 'order/addorder') {
+        return {
+            ...state,
+            addOrder: action.payload
+        }
+    }
+    else if (action.type === 'order/orderbyid') {
+        return {
+            ...state,
+            orderwithId: [action.payload]
+          }
+    }
+    else if (action.type === 'order/orderbyuserid') {
+        return {
+            ...state,
+            orderByUserId: action.payload
+        }
+    }
     
-        return state;
-    
+    else { return state; }
 }

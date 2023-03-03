@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { BASE_URL, FETCH_PRESCRIPTIONS_USERID } from '../../AppConstants';
+
 import { toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
@@ -28,4 +30,18 @@ export function addPrescription(details) {
             progress: undefined,
             theme: "colored",
         }))
+
+
+export function fetchPrescriptionsByUserId(userId){
+    return dispatch=>{
+        return axios.get(BASE_URL+'/prescriptions/getPrescriptions/'+userId).then(resp=>{
+            dispatch({
+                type:FETCH_PRESCRIPTIONS_USERID,
+                action:resp.data
+            })
+        }).catch(error=>{
+            alert("No Prescriptions available");
+        })
+    }
+
 }

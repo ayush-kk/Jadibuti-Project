@@ -2,9 +2,12 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPrescriptionsByUserId } from "../../../Store/Actions/PrescriptionAction";
 import { useParams } from "react-router-dom";
+import Layout from "../../layout/Layout";
+import NavbarWeb from "../../navbar/NavbarWeb";
 
 function FetchPrescriptionByUserId() {
     const prescriptions = useSelector(state => state.PrescriptionReducer.prescriptions);
+    const myuser = JSON.parse(localStorage.getItem("myuser"));
     const dispatch = useDispatch();
     const { userId } = useParams();
     useEffect(() => {
@@ -12,9 +15,10 @@ function FetchPrescriptionByUserId() {
     }, [userId])
     return (
         <div>
-
-            <div className='container'>
-                <table className='table table-bordered'>
+            
+             <section>
+            <div className='container pre-con'>
+                <table className='table table-bordered pre-table'>
                     <thead>
                         <tr>
                             <th>image</th>
@@ -42,10 +46,11 @@ function FetchPrescriptionByUserId() {
                         )
                     }
                 </table>
+
             </div>
+            </section>
 
-
-
+         
         </div>
     )
 }

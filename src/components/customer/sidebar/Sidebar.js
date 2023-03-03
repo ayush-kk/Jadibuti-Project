@@ -14,7 +14,7 @@ function Sidebar({ firstName, lastName, gender, userId }) {
     if (myuser !== null) {
       localStorage.removeItem("myuser")
       alert("logged out.");
-      navigate("/home");
+      navigate("/");
     }
   }
 
@@ -44,10 +44,10 @@ function Sidebar({ firstName, lastName, gender, userId }) {
             <Link className="nav-link dropdown-toggle"
               to=''
               id="navbardrop"
-              data-toggle="dropdown"> Category</Link>
+              data-toggle="dropdown">Prescription</Link>
             <div className="dropdown-menu">
               <Link to={`/prescriptions/${myuser.userId}`} className="dropdown-item">View Prescriptions</Link>
-              <Link to={`/prescriptions/${myuser.userId}`} className="dropdown-item">Add Prescription</Link>
+              <Link to="/" className="dropdown-item">Add Prescription</Link>
               
               
             </div>

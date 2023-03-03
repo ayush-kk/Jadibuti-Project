@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addOrder } from "../../../Store/Actions/OrderAction";
+import { addOrder } from "../../../store/actions/OrderAction";
 
 import styles from "./addorder.module.css"
 import "./UserAndAddress.js"

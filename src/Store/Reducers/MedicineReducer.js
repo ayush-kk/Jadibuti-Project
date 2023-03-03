@@ -8,10 +8,13 @@ const initialState = {
 
 export default function MedicineReducer(state = initialState, action) {
   switch (action.type) {
-    case "medicine/add":
+    case "addmedicine":
       return {
-        ...state,
-        medicine: action.payload,
+        ...state, medicine:action.payload
+      };
+    case "updateMed":
+      return {
+        ...state, medicine:action.payload
       };
 
     case MEDICINE_FETCH_ALL:

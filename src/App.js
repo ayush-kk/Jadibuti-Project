@@ -13,6 +13,8 @@ import UpdateCustomer from "./components/customer/updateCustomer/UpdateCustomer"
 import UpdateAddress from "./components/customer/updateAddress/UpdateAddress";
 import AddMed from "./components/medicine/addMedicine/AddMedicine";
 import Register from "./components/register/Register";
+import AddPrescription from "./components/prescription/AddPrescription";
+import UpdateMedicine from "./components/medicine/updateMedicine/UpdateMedicine";
 
 
 
@@ -32,6 +34,8 @@ function App() {
     <Route path="/customer/update/address/:userId" element={<UpdateAddress/>}/>
     <Route path='/medicine/add' element={<AddMed/>}/>
     <Route path='/register' element={<Register/>}/>
+    <Route path='/prescription/add' element={<AddPrescription/>}/>
+    <Route path='medicine/update/:medid' element={<UpdateMedicine/>}/> 
     
 
     </Routes>

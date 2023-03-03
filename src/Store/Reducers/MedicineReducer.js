@@ -3,7 +3,13 @@ const initialState= {
 }
 
 export default function MedicineReducer(state=initialState,action){
-    if(action.type==='medicine/add'){
+    if(action.type==='addmedicine'){
+        return{
+            ...state, medicine:action.payload
+        }
+    }
+
+    else if(action.type==='updateMed'){
         return{
             ...state, medicine:action.payload
         }

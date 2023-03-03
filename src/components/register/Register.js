@@ -49,6 +49,7 @@ export default function Register() {
                 gender: gender,
                 email: email,
                 phoneNumber: phno,
+                role: role,
                 address: {
                     houseNumber: hno,
                     street: street,

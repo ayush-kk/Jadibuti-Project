@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './registerApp.css'
 import { useDispatch } from 'react-redux';
-import {RegisterAction} from '../../store/actions/RegisterAction'
+import {RegisterAction} from '../../Store/Actions/RegisterAction'
 import { ToastContainer } from 'react-toastify';
 export default function Register() {
     const [fName, setFName] = useState('');
@@ -55,7 +55,8 @@ export default function Register() {
                     landmark: landmark,
                     city: city,
                     state: state,
-                    pinCode: pcode
+                    pinCode: pcode,
+                    role: role
                 }
             }
             dispatch(RegisterAction(payload))

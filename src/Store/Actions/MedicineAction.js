@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { BASE_URL, MEDICINE_FETCH_ALL, MEDICINE_FETCH_BY_ID } from "../../AppConstants";
 
 export function addMedicine(medicine){
     return(dispatch)=>{
@@ -26,4 +27,30 @@ export function addMedicine(medicine){
             theme: "colored",
             }))
     }
+}
+
+
+
+
+
+export function fetchAllMedicine() {
+  return (dispatch) => {
+    return axios.get(BASE_URL + "/medicine/allMedicines").then((resp) => {
+      dispatch({
+        type: MEDICINE_FETCH_ALL,
+        payload: resp.data,
+      });
+    });
+  };
+}
+
+export function fetchMedicineById(id) {
+  return (dispatch) => {
+    return axios.get(BASE_URL + `/medicine/getMedicineById/${id}`).then((resp) => {
+      dispatch({
+        type: MEDICINE_FETCH_BY_ID,
+        payload: resp.data,
+      });
+    });
+  };
 }

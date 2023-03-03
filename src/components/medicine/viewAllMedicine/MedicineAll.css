@@ -1,0 +1,99 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card img {
+    border-radius: 5px;
+    height: 150px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .card h2 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .card button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .card button:hover {
+    background-color: #0056b3;
+  }
+  
+
+   /* .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+  
+  .card p {
+    margin: 5px 10px;
+  }
+  
+  .card button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .card button:hover {
+    background-color: #0062cc;
+  }
+   */

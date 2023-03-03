@@ -18,6 +18,8 @@ import AddMed from "./components/medicine/addMedicine/AddMedicine";
 import Register from "./components/register/Register";
 import FetchPrescriptionByUserId from "./components/prescription/fetchPrescriptionByUserId/FetchPrescriptionByUserId";
 import AddOrder from "./components/order/addOrder/AddOrder";
+import AllMedicine from "./components/medicine/viewAllMedicine/AllMedicine";
+import MedcineById from "./components/medicine/medicineById/MedicineById";
 
 
 
@@ -42,6 +44,8 @@ function App() {
     <Route path='/register' element={<Register/>}/>
     <Route path='/prescriptions/:userId' element={<FetchPrescriptionByUserId/>}/>
     <Route path="/order/addorder" element={<AddOrder />} />
+    <Route path="/medicine/all" element={<AllMedicine />} />
+    <Route path="/medicine/:id" element={<MedcineById />} />
     
     
     </Routes>

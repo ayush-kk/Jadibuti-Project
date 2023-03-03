@@ -13,3 +13,8 @@ export const FETCH_ORDERS_BY_STATUS = 'order/status'
 
 //prescription action
 export const FETCH_PRESCRIPTIONS_USERID='prescriptions/customer'
+
+//Medicine(View All and View by ID)
+export const MEDICINE_FETCH_ALL = "medicine/fetchall";
+export const MEDICINE_FETCH_BY_ID = "medicine/fetchbyid";
+

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from 'react-redux';
-import { addPrescription } from "../../Store/Actions/PrescriptionAction";
+import { addPrescription } from "../../../Store/Actions/PrescriptionAction";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './pres.css'

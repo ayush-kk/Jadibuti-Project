@@ -16,7 +16,7 @@ import AdminDashBoard from "./components/admin/AdminDashBoard";
 import OrdersByStatus from "./components/order/viewOrdersByStatus/OrdersByStatus";
 import AddMed from "./components/medicine/addMedicine/AddMedicine";
 import Register from "./components/register/Register";
-import AddPrescription from "./components/prescription/AddPrescription";
+import AddPrescription from "./components/prescription/addPrescription/AddPrescription";
 import UpdateMedicine from "./components/medicine/updateMedicine/UpdateMedicine";
 import FetchPrescriptionByUserId from "./components/prescription/fetchPrescriptionByUserId/FetchPrescriptionByUserId";
 import AddOrder from "./components/order/addOrder/AddOrder";

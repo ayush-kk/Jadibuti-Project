@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { fetchAllCustomers } from '../../../Store/Actions/CustomerActions';
+import { fetchAllCustomers } from '../../../store/actions/CustomerActions';
 import { Link } from 'react-router-dom';
 
 

@@ -16,7 +16,7 @@ const NavbarWeb = () => {
     if(myuser !==null) {
       localStorage.removeItem("myuser")
       alert("logged out.");
-      navigate("/home");
+      navigate("/");
     }
   }
 

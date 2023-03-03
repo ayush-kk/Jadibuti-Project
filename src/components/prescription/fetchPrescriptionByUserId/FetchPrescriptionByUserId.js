@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPrescriptionsByUserId } from "../../../store/actions/PrescriptionAction";
+import { fetchPrescriptionsByUserId } from "../../../Store/Actions/PrescriptionAction";
 import { useParams } from "react-router-dom";
 
 function FetchPrescriptionByUserId() {

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom';
-import { fetchAllOrders } from '../../../store/actions/OrderActions';
+import { fetchAllOrders } from '../../../Store/Actions/OrderActions';
 import Layout from '../../layout/Layout';
 function FetchAllOrders() {
     //reciver and sender

@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import '../admin/AdmindashBoard.css'
 import { useSelector,useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchAllOrders } from "../../store/actions/OrderActions";
-import { fetchAllCustomers } from "../../store/actions/CustomerActions";
+import { fetchAllOrders } from "../../Store/Actions/OrderActions";
+import { fetchAllCustomers } from "../../Store/Actions/CustomerActions";
 
 function AdminDashBoard() {
     const navigate=useNavigate();

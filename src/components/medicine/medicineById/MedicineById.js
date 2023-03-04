@@ -5,7 +5,7 @@ import { BASE_URL } from "../../../AppConstants";
 import neem from "../../../assets/neem.jpg";
 
 function MedicineById() {
-  const [medicine, setMedicine] = useState({});
+  const [medicine, setMedicine] = useState();
   const { id } = useParams();
 
 
@@ -18,8 +18,10 @@ function MedicineById() {
   }, [id]);
 
   return (
-    <div>
-      <h2 style={{ fontFamily: "Segoe UI", fontSize: "70px" }}>
+    <div> {
+          medicine!=undefined &&
+        <div>
+          <h2 style={{ fontFamily: "Segoe UI", fontSize: "70px" }}>
         {medicine.medicineName}
       </h2>
       <div style={{ display: "flex", textAlign:"left" }}>
@@ -34,15 +36,18 @@ function MedicineById() {
           <p>Company: {medicine.companyName}</p>
           <p>Rating: {medicine.rating}</p>
           {/* <p>Description: {medicine.details}</p> */}
-          {/* <label>Description:</label>
+          <label>Description:</label>
           <ul>
             <li>Ingredients: {medicine.description.ingredients}</li>
             <li>Medicine Type: {medicine.description.medicineType}</li>
-          </ul> */}
+          </ul>
           <button className="btn btn-warning"><Link to={"/order/addorder"}>Add to Cart</Link> </button>
         </div>
       </div>
     </div>
+        
+      }
+      </div>
   );
 }
 

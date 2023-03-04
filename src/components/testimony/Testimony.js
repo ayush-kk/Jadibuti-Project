@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import peeyush from "../../assets/peeyush.jpg";
 import namita from "../../assets/namita.jpg";
 import ashneer from "../../assets/ashneer.jpg";
-import "./Testimony.css"
-
+import "./Testimony.css";
 
 function Testimony() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -80,26 +79,6 @@ function Testimony() {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="carousel_btn-container">
-            <a
-              className="carousel-control-prev"
-              href="#carouselExample2Controls"
-              role="button"
-              data-slide="prev"
-            >
-              <i className="fa fa-long-arrow-left" aria-hidden="true"></i>
-              <span className="sr-only">Previous</span>
-            </a>
-            <a
-              className="carousel-control-next"
-              href="#carouselExample2Controls"
-              role="button"
-              data-slide="next"
-            >
-              <i className="fa fa-long-arrow-left" aria-hidden="true"></i>
-              <span className="sr-only">Next</span>
-            </a>
           </div>
         </div>
       </div>

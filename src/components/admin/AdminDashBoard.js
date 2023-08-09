@@ -13,7 +13,7 @@ function AdminDashBoard() {
     const orders = useSelector((state) => state.OrderReducer.orders);
     const customers = useSelector((state) => state.CustomerReducer.customers);
     const dispatch = useDispatch();
-    //useEffect for CompoundDidMount and render
+    //useEffect for CompoundDidMount and render 
     useEffect(() => {
         dispatch(fetchAllOrders());
     }, []);
